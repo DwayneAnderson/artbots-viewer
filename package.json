@@ -6,20 +6,25 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "concurrently": "^6.1.0",
+    "fastify": "^3.15.1",
+    "fastify-static": "^4.0.1",
     "husky": "^6.0.0",
     "node-sass": "^5.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "resolve-path": "^1.4.0",
     "sass-loader": "^11.1.1",
     "standard": "^16.0.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "server": "node src/server/index.js",
+    "client": "react-scripts start",
+    "start": "concurrently --names=server,client \"yarn run server\" \"yarn run client\"",
     "build": "react-scripts build",
     "test": "standard && react-scripts test",
-    "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/standard",
     "lint:fix": "./node_modules/.bin/standard --fix",
     "prepare": "husky install"
@@ -48,7 +53,5 @@
       "es6",
       "browser"
     ]
-  },
-  "jest": {
   }
 }
