@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Heveltica Neue", "Helvetica", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.App {
+  padding: 2rem;
+
+  h1 {
+    font-size: 3.6rem;
+  }
+}
