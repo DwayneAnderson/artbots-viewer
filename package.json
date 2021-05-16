@@ -22,8 +22,8 @@
   "scripts": {
     "server": "node src/server/index.js",
     "client": "react-scripts start",
-    "start": "concurrently --names=server,client \"yarn run server\" \"yarn run client\"",
-    "build": "react-scripts build",
+    "dev": "concurrently --names=server,client \"yarn run server\" \"yarn run client\"",
+    "build": "standard && react-scripts build",
     "test": "standard && react-scripts test",
     "lint": "./node_modules/.bin/standard",
     "lint:fix": "./node_modules/.bin/standard --fix",
