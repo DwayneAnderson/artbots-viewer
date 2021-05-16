@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "husky": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -18,7 +19,8 @@
     "test": "standard && react-scripts test",
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/standard",
-    "lint-fix": "./node_modules/.bin/standard --fix"
+    "lint:fix": "./node_modules/.bin/standard --fix",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -40,9 +42,9 @@
   },
   "standard": {
     "env": [
-       "jest",
-       "es6",
-       "browser"
+      "jest",
+      "es6",
+      "browser"
     ]
   }
 }
