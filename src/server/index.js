@@ -9,6 +9,10 @@ fastify.register(require('fastify-static'), {
   root: path.join(__dirname, '..', '../build')
 })
 
+fastify.get('/api/foo', async (request, reply) => {
+  return { foo: 'bar' }
+})
+
 fastify.get('/api/*', async (request, reply) => {
   return { hello: 'world', foo: ['bar', 'baz', 'quux'] }
 })
