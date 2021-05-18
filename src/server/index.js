@@ -1,5 +1,9 @@
 require('dotenv').config()
+const fs = require('fs')
+const path = require('path')
+const resolvePath = require('resolve-path')
 const TwitterClient = require('twitter-api-client')
+
 const twitter = new TwitterClient.TwitterClient({
   apiKey: process.env.TWITTER_API_KEY,
   apiSecret: process.env.TWITTER_API_KEY_SECRET,
@@ -8,11 +12,10 @@ const twitter = new TwitterClient.TwitterClient({
 })
 
 const fastify = require('fastify')({
-  logger: true
+  logger: {
+    prettyPrint: true
+  }
 })
-const fs = require('fs')
-const path = require('path')
-const resolvePath = require('resolve-path')
 
 fastify.register(require('fastify-static'), {
   root: path.join(__dirname, '..', '../build')
@@ -29,7 +32,7 @@ fastify.get('/api/tweets', async (request, reply) => {
     console.error('Twitter API error: ', error)
   })
   if (twitterError) {
-    return { error: twitterError }
+    return reply.code(500).send({ error: twitterError })
   }
   twitterRequest.forEach(tweet => {
     const { id, text, source, user } = tweet
