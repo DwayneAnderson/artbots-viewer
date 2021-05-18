@@ -9,6 +9,10 @@
   font-size: 3rem;
   letter-spacing: 2rem;
 
+  &__Text {
+    display: none;
+  }
+
   &__Animation {
     height: 125px;
     width: 125px;

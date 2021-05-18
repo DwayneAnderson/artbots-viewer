@@ -37,7 +37,16 @@ fastify.get('/api/tweets', async (request, reply) => {
   twitterRequest.forEach(tweet => {
     const { id, text, source, user } = tweet
     const img = tweet?.entities?.media?.[0]?.media_url
-    if (img) tweets.push({ id, text, source, img, user: user.screen_name })
+    if (img) {
+      tweets.push({
+        id,
+        text,
+        source,
+        img,
+        user: user.screen_name,
+        size: tweet.entities.media[0].sizes.large
+      })
+    }
   })
   return tweets
 })

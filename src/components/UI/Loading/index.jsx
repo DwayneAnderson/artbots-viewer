@@ -12,6 +12,7 @@ const UILoading = ({ className }) => {
         <div />
         <div />
       </div>
+      <div className='UILoading__Text'>loading...</div>
     </div>
   )
 }
