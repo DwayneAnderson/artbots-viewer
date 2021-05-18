@@ -14,20 +14,23 @@ const Index = () => {
     fetch('/api/tweets')
       .then(tweets => tweets.json())
       .then(tweets => {
-        setTweets(tweets)
-        setLastImgIndex(tweets.length - 1)
+        if (tweets.error) {
+          console.error(error)
+          setError(true)
+        } else {
+          setTweets(tweets)
+          setLastImgIndex(tweets.length - 1)
+          setTimeout(() => {
+            setLoading(false)
+            setImgIndex(0)
+          }, 5 * 1000)
+        }
       })
       .catch(error => {
         console.error(error)
-        setError(error)
+        setError(true)
       })
-      .finally(() => {
-        setTimeout(() => {
-          setLoading(false)
-          setImgIndex(0)
-        }, 5 * 1000)
-      })
-  }, [])
+  }, [error])
 
   const reset = useCallback(() => {
     setTweets(null)
@@ -52,10 +55,16 @@ const Index = () => {
     }, 60 * 1000)
   }, [imgIndex, reset, lastImgIndex])
 
+  if (error) {
+    return <UIError className='Index__Error' />
+  }
+
+  if (loading) {
+    return <UILoading className='Index__Loading' />
+  }
+
   return (
     <div className='Index'>
-      {loading && <UILoading className='Index__Loading' />}
-      {error && <UIError className='Index__Error' />}
       {tweets && tweets.map((tweet, i) => (
         <div key={tweet.id} className='tweet'>
           <div className='tweet__info'>

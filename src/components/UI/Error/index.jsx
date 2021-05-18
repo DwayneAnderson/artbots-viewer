@@ -4,7 +4,9 @@ import './style.scss'
 const UIError = ({ className }) => {
   return (
     <div className={`UIError ${className && className}`}>
-      Loading...
+      <div className='UIError__Text'>
+        Error!
+      </div>
     </div>
   )
 }
