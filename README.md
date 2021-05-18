@@ -18,4 +18,4 @@ This uses the [Twitter API](https://developer.twitter.com/) to retrieve tweets c
 * `TWITTER_API_ACCESS_TOKEN`
 * `TWITTER_API_ACCESS_TOKEN_SECRET`
 4) `yarn run server` to run server on `http://localhost:5000`. This will return the static build and expose the API.
-6) Optionally, `yarn run client` to serve the client on `localhost:3000` and leverage Hot Module Replacement.
+6) Optionally, `yarn run client` to serve the client on `http://localhost:3000` tp leverage Hot Module Replacement while developing client.
