@@ -44,6 +44,7 @@ fastify.get('/api/tweets', async (request, reply) => {
         source,
         img,
         user: user.screen_name,
+        media: tweet.entities.media,
         size: tweet.entities.media[0].sizes.large
       })
     }
