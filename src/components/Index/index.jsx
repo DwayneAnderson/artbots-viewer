@@ -1,13 +1,14 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import UILoading from './../UI/Loading'
 import UIError from './../UI/Error'
+import TwitterLogo from './../../img/twitter.svg'
 import './style.scss'
 
 const Index = () => {
   const [tweets, setTweets] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  const [imgIndex, setImgIndex] = useState(null)
+  const [tweetIndex, setTweetIndex] = useState(null)
   const [lastImgIndex, setLastImgIndex] = useState(null)
 
   const fetchTweets = useCallback(() => {
@@ -22,7 +23,7 @@ const Index = () => {
           setLastImgIndex(tweets.length - 1)
           setTimeout(() => {
             setLoading(false)
-            setImgIndex(0)
+            setTweetIndex(0)
           }, 5 * 1000)
         }
       })
@@ -34,7 +35,7 @@ const Index = () => {
 
   const reset = useCallback(() => {
     setTweets(null)
-    setImgIndex(null)
+    setTweetIndex(null)
     setLoading(true)
     fetchTweets()
   }, [fetchTweets])
@@ -44,16 +45,16 @@ const Index = () => {
   }, [fetchTweets])
 
   useEffect(() => {
-    if (imgIndex === null) {
+    if (tweetIndex === null) {
       return
-    } else if (imgIndex === lastImgIndex) {
+    } else if (tweetIndex === lastImgIndex) {
       reset()
       return
     }
     setTimeout(() => {
-      setImgIndex(imgIndex + 1)
+      setTweetIndex(tweetIndex + 1)
     }, 60 * 1000)
-  }, [imgIndex, reset, lastImgIndex])
+  }, [tweetIndex, reset, lastImgIndex])
 
   if (error) {
     return <UIError className='Index__Error' />
@@ -66,12 +67,13 @@ const Index = () => {
   return (
     <div className='Index'>
       {tweets && tweets.map((tweet, i) => (
-        <div key={tweet.id} className='tweet'>
-          <div className='tweet__info'>
+        <div key={tweet.id} className={`Tweet ${i === tweetIndex ? 'Tweet--current' : ''}`}>
+          <div className='Tweet__Info'>
+            <img src={TwitterLogo} alt='' className='Tweet__Logo' />
             @{tweet.user}: {tweet.text}
           </div>
           <div
-            className={`tweet__img ${i === imgIndex ? 'tweet__img--current' : ''}`}
+            className='Tweet__Image'
             style={{ backgroundImage: `url(${tweet.img})` }}
           />
         </div>
