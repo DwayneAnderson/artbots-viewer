@@ -13,40 +13,70 @@
     align-items: center;
     justify-content: center;
   }
+}
 
-  .tweet {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    color: white;
-    overflow: hidden;
+.Tweet {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  visibility: hidden;
 
-    &__info {
-      display: none;
-      position: absolute;
-      bottom: 2rem;
-      right: 2rem;
-    }
+  &--current {
+    visibility: visible;
 
-    &__img {
-      width: 100vw;
-      height: 100vh;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      position: relative;
-      left: -9999px;
-
-      &--current {
-        left: 0;
-      }
+    .Tweet__Info {
+      opacity: 1;
+      animation: fadeOut;
+      animation-duration: 2s;
+      animation-delay: 10s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
     }
   }
+
+  &__Info {
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    z-index: 1;
+    bottom: 4vw;
+    left: 30vw;
+    width: 40vw;
+    background: rgba(#111, 0.9);
+    color: #111;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: normal;
+    padding: 1.8rem;
+    border-radius: 1rem;
+    color: white;
+  }
+
+  &__Logo {
+    width: 3rem;
+    margin-right: 1.8rem;
+  }
+
+  &__Image {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+}
+
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
 }
