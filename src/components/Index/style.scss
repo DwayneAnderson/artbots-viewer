@@ -66,12 +66,25 @@
     margin-right: 1.8rem;
   }
 
-  &__Image {
+  &__Image,
+  &__Video {
     width: 100vw;
     height: 100vh;
+  }
+
+  &__Image {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+  }
+
+  &__Video {
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
   }
 
 }

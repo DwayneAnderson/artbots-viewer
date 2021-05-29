@@ -21,13 +21,23 @@ module.exports = async (request, reply) => {
   }
   twitterRequest.forEach(tweet => {
     const { id, text, source, user } = tweet
-    const img = tweet?.entities?.media?.[0]?.media_url
-    if (img) {
+    let mediaUrl = tweet?.entities?.media?.[0]?.media_url
+    if (mediaUrl) {
+      const isVideo = mediaUrl.match('video_thumb')
+      if (isVideo) {
+        mediaUrl = mediaUrl
+          .replace('http:', 'https:')
+          .replace('pbs.twimg.com', 'video.twimg.com')
+          .replace('tweet_video_thumb', 'tweet_video')
+          .replace('.jpg', '.mp4')
+      }
+
       tweets.push({
         id,
         text,
         source,
-        img,
+        isVideo: !!isVideo,
+        mediaUrl,
         user: user.screen_name,
         media: tweet.entities.media,
         size: tweet.entities.media[0].sizes.large

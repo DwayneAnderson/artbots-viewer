@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import UILoading from './../UI/Loading'
 import UIError from './../UI/Error'
+import Video from './Video'
 import TwitterLogo from './../../img/twitter.svg'
 import './style.scss'
 
@@ -72,10 +73,23 @@ const Index = () => {
             <img src={TwitterLogo} alt='' className='Tweet__Logo' />
             @{tweet.user}: {tweet.text}
           </div>
-          <div
-            className='Tweet__Image'
-            style={{ backgroundImage: `url(${tweet.img})` }}
-          />
+          {tweet.isVideo
+            ? (
+              <div className='Tweet__Video'>
+                {i < tweetIndex + 5 && (
+                  <Video src={tweet.mediaUrl} />
+                )}
+                {/* <video autoplay='' loop='' muted='' playsinline='' dataobjectfit='cover'><source src={tweet.mediaUrl} /></video> */}
+                {/* <video playsinline='' autoplay='' muted='' controls='' loop='' name='media'><source src='https://video.twimg.com/tweet_video/E2jt7K7X0AIUbcQ.mp4' type='video/mp4' /></video> */}
+                {/* <video controls='' autoPlay='' loop='' name='media'>
+                  <source src={tweet.mediaUrl} type='video/mp4' />
+                </video> */}
+              </div>
+              )
+            : <div
+                className='Tweet__Image'
+                style={{ backgroundImage: `url(${tweet.mediaUrl})` }}
+              />}
         </div>
       ))}
     </div>
