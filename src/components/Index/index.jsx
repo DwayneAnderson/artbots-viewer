@@ -67,31 +67,33 @@ const Index = () => {
 
   return (
     <div className='Index'>
-      {tweets && tweets.map((tweet, i) => (
-        <div key={tweet.id} className={`Tweet ${i === tweetIndex ? 'Tweet--current' : ''}`}>
-          <div className='Tweet__Info'>
-            <img src={TwitterLogo} alt='' className='Tweet__Logo' />
-            @{tweet.user}: {tweet.text}
-          </div>
-          {tweet.isVideo
-            ? (
-              <div className='Tweet__Video'>
-                {i < tweetIndex + 5 && (
-                  <Video src={tweet.mediaUrl} />
-                )}
-                {/* <video autoplay='' loop='' muted='' playsinline='' dataobjectfit='cover'><source src={tweet.mediaUrl} /></video> */}
-                {/* <video playsinline='' autoplay='' muted='' controls='' loop='' name='media'><source src='https://video.twimg.com/tweet_video/E2jt7K7X0AIUbcQ.mp4' type='video/mp4' /></video> */}
-                {/* <video controls='' autoPlay='' loop='' name='media'>
-                  <source src={tweet.mediaUrl} type='video/mp4' />
-                </video> */}
+      {tweets && tweets.map((tweet, i) => {
+        if (i < tweetIndex) {
+          return null
+        }
+        return (
+          <div key={tweet.id} className={`Tweet ${i === tweetIndex ? 'Tweet--current' : ''}`}>
+            <div className='Tweet__Info'>
+              <img src={TwitterLogo} alt='' className='Tweet__Logo' />
+              <div className='Tweet__Text'>
+                @{tweet.user}: {tweet.text}
               </div>
-              )
-            : <div
-                className='Tweet__Image'
-                style={{ backgroundImage: `url(${tweet.mediaUrl})` }}
-              />}
-        </div>
-      ))}
+            </div>
+            {tweet.isVideo
+              ? (
+                <div className='Tweet__Video'>
+                  {i < tweetIndex + 5 && (
+                    <Video src={tweet.mediaUrl} />
+                  )}
+                </div>
+                )
+              : <div
+                  className='Tweet__Image'
+                  style={{ backgroundImage: `url(${tweet.mediaUrl})` }}
+                />}
+          </div>
+        )
+      })}
     </div>
   )
 }

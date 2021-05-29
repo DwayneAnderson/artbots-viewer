@@ -34,18 +34,12 @@
 
     .Tweet__Info {
       opacity: 1;
-      animation: fadeOut;
-      animation-duration: 2s;
-      animation-delay: 10s;
-      animation-iteration-count: 1;
-      animation-timing-function: ease-out;
-      animation-fill-mode: forwards;
     }
   }
 
   &__Info {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     position: absolute;
     z-index: 1;
     bottom: 4vw;
@@ -61,7 +55,10 @@
     color: white;
   }
 
+  &__Text {}
+
   &__Logo {
+    align-self: flex-start;
     width: 3rem;
     margin-right: 1.8rem;
   }
