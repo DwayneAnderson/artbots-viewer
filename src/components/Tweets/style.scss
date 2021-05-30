@@ -1,4 +1,4 @@
-.Index {
+.Tweets {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -34,6 +34,12 @@
 
     .Tweet__Info {
       opacity: 1;
+      animation: slideDown;
+      animation-duration: 2s;
+      animation-delay: 10s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
     }
   }
 
@@ -42,26 +48,23 @@
     align-items: center;
     position: absolute;
     z-index: 1;
-    bottom: 4vw;
-    left: 30vw;
-    width: 40vw;
-    background: rgba(#111, 0.9);
-    color: #111;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background: rgba(#111, 0.7);
     font-size: 1.8rem;
     line-height: 2rem;
     font-weight: normal;
     padding: 1.8rem;
-    border-radius: 1rem;
     color: white;
-  }
-
-  &__Text {}
+}
 
   &__Logo {
-    align-self: flex-start;
     width: 3rem;
     margin-right: 1.8rem;
   }
+
+  &__Text {}
 
   &__Image,
   &__Video {
@@ -86,7 +89,7 @@
 
 }
 
-@keyframes fadeOut {
-  from {opacity: 1;}
-  to {opacity: 0;}
+@keyframes slideDown {
+  from {bottom: 0;}
+  to {bottom: -20rem;}
 }
