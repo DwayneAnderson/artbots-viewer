@@ -14,17 +14,17 @@ ArtBotsViewer leverages the [Twitter API](https://developer.twitter.com/) to ret
 1) `git clone git@github.com:DwayneAnderson/artbots-viewer.git`
 2) `cd artbots-viwer`
 3) `yarn install`
-* If `yarn` is not available on your system  run `npm add -g yarn` and repeat step 3.
+* If `yarn` is not available on your system, run `npm add -g yarn` and repeat step 3.
 4) `cp .env.example .env`
-* This command makes a copy of `.env.example` as `.env`, which will be used to configure your installation's runtime environment.
-5) Use editor of your choice to edit `.env`, modifying the following values:
+* makes a copy of `.env.example` as `.env`, which will be used to configure your installation's runtime environment.
+5) Edit `.env`, modifying the following values:
 * `TWITTER_API_KEY`
 * `TWITTER_API_KEY_SECRET`
 * `TWITTER_API_ACCESS_TOKEN`
 * `TWITTER_API_ACCESS_TOKEN_SECRET`
 6) `yarn run build`
-* compile the static build from `src`
+* compiles the static build from `/src`
 7) `yarn run server`
-* This will return the static build of the client application at `http://localhost:5000` and expose the API to the client.
+* returns the static build of the client application at `http://localhost:5000` and expose the API to the client.
 8) Optionally, `yarn run client`
-* This will serve the client at `http://localhost:3000`, allowing for [HMR](https://webpack.js.org/concepts/hot-module-replacement/) should you be interested in modifying the client.
+* serves the client at `http://localhost:3000`, allowing for [HMR](https://webpack.js.org/concepts/hot-module-replacement/).
