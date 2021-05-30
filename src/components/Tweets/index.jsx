@@ -11,6 +11,14 @@ const Tweets = () => {
   const [error, setError] = useState(null)
   const [tweets, setTweets] = useState(null)
   const [tweetIndex, setTweetIndex] = useState(null)
+  const [fullscreen, setFullscreen] = useState(null)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFullscreen(!window.screenTop && !window.screenY)
+    }, 200)
+    return () => clearInterval(interval)
+  }, [])
 
   const loadTweets = useCallback(() => {
     fetchTweets()
@@ -23,6 +31,7 @@ const Tweets = () => {
         setLoading(false)
       })
   }, [])
+  useEffect(loadTweets, [loadTweets])
 
   const reset = useCallback(() => {
     setTweets(null)
@@ -30,9 +39,6 @@ const Tweets = () => {
     setLoading(true)
     loadTweets()
   }, [loadTweets])
-
-  useEffect(loadTweets, [loadTweets])
-
   useEffect(() => {
     if (tweetIndex === null) return
     if (tweetIndex === tweets.length) return reset()
@@ -40,10 +46,10 @@ const Tweets = () => {
   }, [tweetIndex, reset, tweets])
 
   return (
-    <div className='Tweets'>
+    <div className={`Tweets ${fullscreen ? 'Tweets--fullscreen' : ''}`}>
       {error && <UIError className='Tweets__Error' />}
       {loading && <UILoading className='Tweets__Loading' />}
-      {(!loading && !error) && tweets.slice(tweetIndex, tweetIndex + 1).map(tweet => (
+      {(!loading && !error) && tweets.slice(tweetIndex, tweetIndex + 4).map(tweet => (
         <Tweet
           key={tweet.id}
           tweet={tweet}
