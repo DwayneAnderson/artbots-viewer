@@ -9,6 +9,7 @@ const twitter = new TwitterClient.TwitterClient({
 module.exports = async (request, reply) => {
   let twitterError = false
   const tweets = []
+
   const twitterRequest = await twitter.accountsAndUsers.listsStatuses({
     list_id: process.env.TWITTER_LIST_ID,
     count: 200
@@ -16,9 +17,11 @@ module.exports = async (request, reply) => {
     twitterError = error
     console.error('Twitter API error: ', error)
   })
+
   if (twitterError) {
     return reply.code(500).send({ error: twitterError })
   }
+
   twitterRequest.forEach(tweet => {
     const { id, text, source, user } = tweet
     let mediaUrl = tweet?.entities?.media?.[0]?.media_url
@@ -36,8 +39,9 @@ module.exports = async (request, reply) => {
         id,
         text,
         source,
-        isVideo: !!isVideo,
         mediaUrl,
+        isVideo: !!isVideo,
+        isImage: !isVideo,
         user: user.screen_name,
         media: tweet.entities.media,
         size: tweet.entities.media[0].sizes.large
