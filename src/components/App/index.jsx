@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { ErrorBoundary } from 'react-error-boundary'
 import Index from './../Index'
 import Error from './../UI/Error'
@@ -11,7 +12,16 @@ const App = () => {
       FallbackComponent={Error}
     >
       <div className='App'>
-        <Index />
+        <Router>
+          <Switch>
+            <Route exact path='/'>
+              <Index />
+            </Route>
+            <Route path='/list/:listId?'>
+              <Index />
+            </Route>
+          </Switch>
+        </Router>
       </div>
     </ErrorBoundary>
   )

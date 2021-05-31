@@ -7,11 +7,12 @@ const twitter = new TwitterClient.TwitterClient({
 })
 
 module.exports = async (request, reply) => {
+  const { listId } = request.params
   let twitterError = false
   const tweets = []
 
   const twitterRequest = await twitter.accountsAndUsers.listsStatuses({
-    list_id: process.env.TWITTER_LIST_ID,
+    list_id: listId,
     count: 200
   }).catch(error => {
     twitterError = error
