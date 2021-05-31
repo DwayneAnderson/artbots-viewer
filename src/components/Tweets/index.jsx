@@ -26,7 +26,7 @@ const Tweets = () => {
     fetchTweets(listId || '976556889981906945')
       .then(tweets => {
         if (tweets.error) {
-          setError(true)
+          setError(tweets.error)
         }
         setTweets(tweets)
         setTweetIndex(0)
@@ -49,7 +49,7 @@ const Tweets = () => {
 
   return (
     <div className={`Tweets ${fullscreen ? 'Tweets--fullscreen' : ''}`}>
-      {error && <UIError className='Tweets__Error' />}
+      {error && <UIError className='Tweets__Error' message={error} />}
       {loading && <UILoading className='Tweets__Loading' />}
       {(!loading && !error) && tweets.slice(tweetIndex, tweetIndex + 4).map(tweet => (
         <Tweet
