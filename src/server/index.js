@@ -11,7 +11,7 @@ fastify.register(require('fastify-static'), {
   root: path.join(__dirname, '..', '../build')
 })
 
-fastify.get('/api/tweets', getTweets)
+fastify.get('/api/tweets/:listId', getTweets)
 fastify.get('/', getClient)
 
 const start = async () => {

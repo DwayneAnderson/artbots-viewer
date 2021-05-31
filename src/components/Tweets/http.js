@@ -1,5 +1,5 @@
-const fetchTweets = () =>
-  fetch('/api/tweets')
+const fetchTweets = (listId) =>
+  fetch(`/api/tweets/${listId}`)
     .then(tweets => tweets.json())
 
 export { fetchTweets }

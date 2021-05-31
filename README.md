@@ -1,14 +1,12 @@
 # ArtBotsViewer
 
-### What does this do?
-
-ArtBotsViewer leverages the [Twitter API](https://developer.twitter.com/) to retrieve tweets containing images from the popular [ArtBots List](https://twitter.com/i/lists/976556889981906945) by [@andreitr](https://twitter.com/andreitr) and display them in a web-based slideshow.
+ArtBotsViewer leverages the [Twitter API](https://developer.twitter.com/) to retrieve tweets containing images or looping videos from [Twitter lists](https://help.twitter.com/en/using-twitter/twitter-lists)  and display them in a web-based slideshow. (The popular [ArtBots List](https://twitter.com/i/lists/976556889981906945) by [@andreitr](https://twitter.com/andreitr) was the original inspiration.)
 
 ### Requirements
 
 * [Node.js](https://nodejs.org/) version >= v14.17.0 - [nvm](https://github.com/nvm-sh/nvm) strongly recommended
-* [Twitter API Credentials - OAuth 1.0a](https://developer.twitter.com/en/docs/authentication/oauth-1-0a)
 * [yarn](https://yarnpkg.com/) package manager
+* [Twitter API Credentials - OAuth 1.0a](https://developer.twitter.com/en/docs/authentication/oauth-1-0a)
 
 ### Installation:
 1) `git clone git@github.com:DwayneAnderson/artbots-viewer.git`
@@ -28,3 +26,12 @@ ArtBotsViewer leverages the [Twitter API](https://developer.twitter.com/) to ret
 * returns the static build of the client application at `http://localhost:5000` and expose the API to the client.
 8) Optionally, `yarn run client`
 * serves the client at `http://localhost:3000`, allowing for [HMR](https://webpack.js.org/concepts/hot-module-replacement/).
+
+-----------
+#### Twitter Lists
+* ArtBots: 976556889981906945
+  * [https://twitter.com/i/lists/976556889981906945](https://twitter.com/i/lists/976556889981906945)
+  * [http://localhost:5000/list/976556889981906945](http://localhost:50000/list/976556889981906945)
+* BeesAndBombs: 1394666258121957384
+  * [https://twitter.com/i/lists/1394666258121957384](https://twitter.com/i/lists/1394666258121957384)
+  * [http://localhost:5000/list/1394666258121957384](http://localhost:50000/list/1394666258121957384)

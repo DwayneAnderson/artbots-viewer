@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react'
+import { useParams } from 'react-router-dom'
 import UILoading from '../UI/Loading'
 import UIError from '../UI/Error'
 import Video from '../UI/Video'
@@ -7,6 +8,7 @@ import { fetchTweets } from './http'
 import './style.scss'
 
 const Tweets = () => {
+  const { listId } = useParams()
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [tweets, setTweets] = useState(null)
@@ -21,7 +23,7 @@ const Tweets = () => {
   }, [])
 
   const loadTweets = useCallback(() => {
-    fetchTweets()
+    fetchTweets(listId || '976556889981906945')
       .then(tweets => {
         if (tweets.error) {
           setError(true)
@@ -30,8 +32,8 @@ const Tweets = () => {
         setTweetIndex(0)
         setLoading(false)
       })
-  }, [])
-  useEffect(loadTweets, [loadTweets])
+  }, [listId])
+  useEffect(loadTweets, [loadTweets, listId])
 
   const reset = useCallback(() => {
     setTweets(null)
