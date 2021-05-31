@@ -27,20 +27,23 @@ module.exports = async (request, reply) => {
     return reply.code(twitterError.statusCode).send({ error: errorMessage })
   }
 
-  twitterRequest.forEach(tweet => {
+  twitterRequest.forEach((tweet, i) => {
     const { id, text, source, user } = tweet
     let mediaUrl = tweet?.entities?.media?.[0]?.media_url
+    let isVideo
+    let isGif
     if (mediaUrl) {
-      const isVideo = mediaUrl.match('video_thumb')
+      isVideo = mediaUrl.match('ext_tw_video_thumb')
+      isGif = mediaUrl.match('video_thumb')
       if (isVideo) {
-        mediaUrl = mediaUrl
-          .replace('http:', 'https:')
-          .replace('pbs.twimg.com', 'video.twimg.com')
-          .replace('tweet_video_thumb', 'tweet_video')
-          .replace('.jpg', '.mp4')
+        mediaUrl = tweet.extended_entities.media[0].video_info.variants[0].url
+      } else if (isGif) {
+        isVideo = true
+        mediaUrl = tweet.extended_entities.media[0].video_info.variants[0].url
       }
 
       tweets.push({
+        original: tweet,
         id,
         text,
         source,

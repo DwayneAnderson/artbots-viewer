@@ -33,7 +33,7 @@ ArtBotsViewer leverages the [Twitter API](https://developer.twitter.com/) to ret
 * ArtBots: 976556889981906945 (default)
   * [https://twitter.com/i/lists/976556889981906945](https://twitter.com/i/lists/976556889981906945)
   * [http://localhost:5000/list/976556889981906945](http://localhost:5000/list/976556889981906945)
-* Tate Collection 1399409332341534720
+* Tate Collection: 1399409332341534720
   * [https://twitter.com/i/lists/1399409332341534720](https://twitter.com/i/lists/1399409332341534720)
   * [http://localhost:5000/list/1399409332341534720](http://localhost:5000/list/1399409332341534720)
 * BeesAndBombs: 1394666258121957384
@@ -54,3 +54,6 @@ ArtBotsViewer leverages the [Twitter API](https://developer.twitter.com/) to ret
 * xkcd: 1399407403800481792
   * [https://twitter.com/i/lists/1399407403800481792](https://twitter.com/i/lists/1399407403800481792)
   * [http://localhost:5000/list/1399407403800481792](http://localhost:5000/list/1399407403800481792)
+* Everything is Terrible: 1399419658206277633
+  * [https://twitter.com/i/lists/1399419658206277633](https://twitter.com/i/lists/1399419658206277633)
+  * [http://localhost:5000/list/1399419658206277633](http://localhost:5000/list/1399419658206277633)
