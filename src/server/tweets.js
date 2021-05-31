@@ -16,11 +16,15 @@ module.exports = async (request, reply) => {
     count: 200
   }).catch(error => {
     twitterError = error
-    console.error('Twitter API error: ', error)
+    console.error('Twitter API error: ', error.data)
   })
 
   if (twitterError) {
-    return reply.code(500).send({ error: twitterError })
+    const errorData = JSON.parse(twitterError.data).errors[0]
+    const errorMessage = errorData.code.toString() === '112'
+      ? 'Twitter API: Invalid Twitter List ID'
+      : 'Twitter API Error'
+    return reply.code(twitterError.statusCode).send({ error: errorMessage })
   }
 
   twitterRequest.forEach(tweet => {
