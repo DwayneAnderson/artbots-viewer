@@ -12,7 +12,10 @@ fastify.register(require('fastify-static'), {
 })
 
 fastify.get('/api/tweets/:listId', getTweets)
-fastify.get('/', getClient)
+
+fastify.setNotFoundHandler(getClient)
+
+// fastify.get('/', getClient)
 
 const start = async () => {
   try {
