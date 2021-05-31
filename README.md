@@ -29,9 +29,22 @@ ArtBotsViewer leverages the [Twitter API](https://developer.twitter.com/) to ret
 
 -----------
 #### Twitter Lists
+
 * ArtBots: 976556889981906945 (default)
   * [https://twitter.com/i/lists/976556889981906945](https://twitter.com/i/lists/976556889981906945)
-  * [http://localhost:5000/list/976556889981906945](http://localhost:50000/list/976556889981906945)
+  * [http://localhost:5000/list/976556889981906945](http://localhost:5000/list/976556889981906945)
 * BeesAndBombs: 1394666258121957384
   * [https://twitter.com/i/lists/1394666258121957384](https://twitter.com/i/lists/1394666258121957384)
-  * [http://localhost:5000/list/1394666258121957384](http://localhost:50000/list/1394666258121957384)
+  * [http://localhost:5000/list/1394666258121957384](http://localhost:5000/list/1394666258121957384)
+* Liana Finck 1399398816034398208
+  * [https://twitter.com/i/lists/1399398816034398208](https://twitter.com/i/lists/1399398816034398208)
+  * [http://localhost:5000/list/1399398816034398208](http://localhost:5000/list/1399398816034398208)
+* Mean Streets of New York 1399398252517093378
+  * [https://twitter.com/i/lists/1399398252517093378](https://twitter.com/i/lists/1399398252517093378)
+  * [http://localhost:5000/list/1399398252517093378](http://localhost:5000/list/1399398252517093378)
+* NEOMECHANICA 1399398958137413639
+  * [https://twitter.com/i/lists/1399398958137413639](https://twitter.com/i/lists/1399398958137413639)
+  * [http://localhost:5000/list/1399398958137413639](http://localhost:5000/list/1399398958137413639)
+* Womens Art 1399398488530509824
+  * [https://twitter.com/i/lists/1399398488530509824](https://twitter.com/i/lists/1399398488530509824)
+  * [http://localhost:5000/list/1399398488530509824](http://localhost:5000/list/1399398488530509824)
