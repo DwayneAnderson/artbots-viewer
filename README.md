@@ -30,30 +30,42 @@ ArtBotsViewer leverages the [Twitter API](https://developer.twitter.com/) to ret
 -----------
 #### Twitter Lists
 
-* ArtBots: 976556889981906945 (default)
-  * [https://twitter.com/i/lists/976556889981906945](https://twitter.com/i/lists/976556889981906945)
-  * [http://localhost:5000/list/976556889981906945](http://localhost:5000/list/976556889981906945)
-* Tate Collection: 1399409332341534720
-  * [https://twitter.com/i/lists/1399409332341534720](https://twitter.com/i/lists/1399409332341534720)
-  * [http://localhost:5000/list/1399409332341534720](http://localhost:5000/list/1399409332341534720)
-* BeesAndBombs: 1394666258121957384
-  * [https://twitter.com/i/lists/1394666258121957384](https://twitter.com/i/lists/1394666258121957384)
-  * [http://localhost:5000/list/1394666258121957384](http://localhost:5000/list/1394666258121957384)
-* Liana Finck 1399398816034398208
-  * [https://twitter.com/i/lists/1399398816034398208](https://twitter.com/i/lists/1399398816034398208)
-  * [http://localhost:5000/list/1399398816034398208](http://localhost:5000/list/1399398816034398208)
-* Mean Streets of New York: 1399398252517093378
-  * [https://twitter.com/i/lists/1399398252517093378](https://twitter.com/i/lists/1399398252517093378)
-  * [http://localhost:5000/list/1399398252517093378](http://localhost:5000/list/1399398252517093378)
-* NEOMECHANICA: 1399398958137413639
-  * [https://twitter.com/i/lists/1399398958137413639](https://twitter.com/i/lists/1399398958137413639)
-  * [http://localhost:5000/list/1399398958137413639](http://localhost:5000/list/1399398958137413639)
-* Womens Art: 1399398488530509824
-  * [https://twitter.com/i/lists/1399398488530509824](https://twitter.com/i/lists/1399398488530509824)
-  * [http://localhost:5000/list/1399398488530509824](http://localhost:5000/list/1399398488530509824)
-* xkcd: 1399407403800481792
-  * [https://twitter.com/i/lists/1399407403800481792](https://twitter.com/i/lists/1399407403800481792)
-  * [http://localhost:5000/list/1399407403800481792](http://localhost:5000/list/1399407403800481792)
-* Everything is Terrible: 1399419658206277633
-  * [https://twitter.com/i/lists/1399419658206277633](https://twitter.com/i/lists/1399419658206277633)
-  * [http://localhost:5000/list/1399419658206277633](http://localhost:5000/list/1399419658206277633)
+* Fine Art
+  * ArtBots: 976556889981906945 (default)
+    * [https://twitter.com/i/lists/976556889981906945](https://twitter.com/i/lists/976556889981906945)
+    * [http://localhost:5000/list/976556889981906945](http://localhost:5000/list/976556889981906945)
+  * Tate Collection: 1399409332341534720
+    * [https://twitter.com/i/lists/1399409332341534720](https://twitter.com/i/lists/1399409332341534720)
+    * [http://localhost:5000/list/1399409332341534720](http://localhost:5000/list/1399409332341534720)
+  * Womens Art: 1399398488530509824
+    * [https://twitter.com/i/lists/1399398488530509824](https://twitter.com/i/lists/1399398488530509824)
+    * [http://localhost:5000/list/1399398488530509824](http://localhost:5000/list/1399398488530509824)
+
+* Photography
+  * Mean Streets of New York: 1399398252517093378
+    * [https://twitter.com/i/lists/1399398252517093378](https://twitter.com/i/lists/1399398252517093378)
+    * [http://localhost:5000/list/1399398252517093378](http://localhost:5000/list/1399398252517093378)
+
+* Illustration
+  * Liana Finck 1399398816034398208
+    * [https://twitter.com/i/lists/1399398816034398208](https://twitter.com/i/lists/1399398816034398208)
+    * [http://localhost:5000/list/1399398816034398208](http://localhost:5000/list/1399398816034398208)
+
+* Animation
+  * BeesAndBombs: 1394666258121957384
+    * [https://twitter.com/i/lists/1394666258121957384](https://twitter.com/i/lists/1394666258121957384)
+    * [http://localhost:5000/list/1394666258121957384](http://localhost:5000/list/1394666258121957384)
+
+* Miscellaneous
+  * NEOMECHANICA: 1399398958137413639
+    * [https://twitter.com/i/lists/1399398958137413639](https://twitter.com/i/lists/1399398958137413639)
+    * [http://localhost:5000/list/1399398958137413639](http://localhost:5000/list/1399398958137413639)
+  * xkcd: 1399407403800481792
+    * [https://twitter.com/i/lists/1399407403800481792](https://twitter.com/i/lists/1399407403800481792)
+    * [http://localhost:5000/list/1399407403800481792](http://localhost:5000/list/1399407403800481792)
+  * Everything is Terrible: 1399419658206277633
+    * [https://twitter.com/i/lists/1399419658206277633](https://twitter.com/i/lists/1399419658206277633)
+    * [http://localhost:5000/list/1399419658206277633](http://localhost:5000/list/1399419658206277633)
+  * 70s SciFi Art 1399734600268611585
+    * [https://twitter.com/i/lists/1399734600268611585](https://twitter.com/i/lists/1399734600268611585)
+    * [http://localhost:5000/list/1399734600268611585](http://localhost:5000/list/1399734600268611585)
