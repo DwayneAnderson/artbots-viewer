@@ -30,8 +30,8 @@ module.exports = async (request, reply) => {
   twitterRequest.forEach((tweet, i) => {
     const { id, text, source, user } = tweet
     let mediaUrl = tweet?.entities?.media?.[0]?.media_url
-    let isVideo
-    let isGif
+    let isVideo = null
+    let isGif = null
     if (mediaUrl) {
       isVideo = mediaUrl.match('ext_tw_video_thumb')
       isGif = mediaUrl.match('video_thumb')
