@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { ErrorBoundary } from 'react-error-boundary'
 import Index from './../Index'
+import Tweets from './../Tweets'
 import Error from './../UI/Error'
 
 import './style.scss'
@@ -18,7 +19,7 @@ const App = () => {
               <Index />
             </Route>
             <Route path='/list/:listId?'>
-              <Index />
+              <Tweets />
             </Route>
           </Switch>
         </Router>

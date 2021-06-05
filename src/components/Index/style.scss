@@ -1,0 +1,41 @@
+.Index {
+  color: white;
+  padding: 4rem;
+
+  &__Header {
+    border-bottom: 1px solid white;
+    margin-bottom: 2rem;
+    color: orangered;
+  }
+
+  &__List {
+    > ul {
+      padding: 0;
+      list-style-type: none;
+      font-size: 2rem;
+
+      > li {
+        color: white;
+
+        h4 {
+          margin-bottom: 1rem;
+        }
+
+        ul li {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+
+  a:link,
+  a:visited {
+    color: cyan;
+  }
+  a:hover,
+  a:active {
+    color: gold;
+  }
+}
+

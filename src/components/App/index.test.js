@@ -3,6 +3,6 @@ import App from '.'
 
 test('renders loading screen', () => {
   render(<App />)
-  const linkElement = screen.getByText(/loading/i)
-  expect(linkElement).toBeInTheDocument()
+  const title = screen.getByText('ArtBots Viewer', { exact: false })
+  expect(title).toBeInTheDocument()
 })

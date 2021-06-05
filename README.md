@@ -13,6 +13,9 @@ ArtBotsViewer leverages the [Twitter API](https://developer.twitter.com/) to ret
 2) `cd artbots-viwer`
 3) `yarn install`
 
+### Develop
+`yarn run dev`
+
 ### Build
 `yarn run build`
 
