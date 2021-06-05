@@ -30,6 +30,9 @@
     "web-vitals": "^1.0.1",
     "yarn": "^1.22.10"
   },
+  "devDependencies": {
+    "netlify-cli": "^3.34.0"
+  },
   "scripts": {
     "server:server": "node src/server/index.js",
     "server": "node src/server/index.js",
