@@ -60,9 +60,9 @@ ArtBotsViewer leverages the [Twitter API](https://developer.twitter.com/) to ret
   * [http://localhost:5000/list/1394666258121957384](http://localhost:5000/list/1394666258121957384)
 
 ##### Science & Technology
-* The Ephemerides (NASA OPUS): 1094771294846009345
-  * [https://twitter.com/i/lists/1094771294846009345](https://twitter.com/i/lists/1094771294846009345)
-  * [http://localhost:5000/list/1094771294846009345](http://localhost:5000/list/1094771294846009345)
+* The Ephemerides (NASA OPUS): 1399765585425170438
+  * [https://twitter.com/i/lists/1399765585425170438](https://twitter.com/i/lists/1399765585425170438)
+  * [http://localhost:5000/list/1399765585425170438](http://localhost:5000/list/1399765585425170438)
 
 ##### Miscellaneous
 * 70s SciFi Art: 1399734600268611585
