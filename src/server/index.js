@@ -11,11 +11,9 @@ fastify.register(require('fastify-static'), {
   root: path.join(__dirname, '..', '../build')
 })
 
-fastify.get('/api/tweets/:listId', getTweets)
+fastify.get('/api/tweets', getTweets)
 
 fastify.setNotFoundHandler(getClient)
-
-// fastify.get('/', getClient)
 
 const start = async () => {
   try {

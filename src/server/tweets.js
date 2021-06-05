@@ -7,7 +7,7 @@ const twitter = new TwitterClient.TwitterClient({
 })
 
 module.exports = async (request, reply) => {
-  const { listId } = request.params
+  const { listId } = request.query
   let twitterError = false
   const tweets = []
 
