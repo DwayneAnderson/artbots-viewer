@@ -2,7 +2,6 @@
   "name": "artbots-viewer",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
   "dependencies": {
     "@react-hook/window-size": "^3.0.7",
     "@testing-library/jest-dom": "^5.11.4",
@@ -31,17 +30,17 @@
     "yarn": "^1.22.10"
   },
   "scripts": {
-    "server:server": "node src/server/index.js",
-    "server": "node src/server/index.js",
+    "build": "standard && react-scripts build",
+    "build:functions": "netlify-lambda build functions --config ./webpack.config.netlify.js",
     "client": "react-scripts start",
     "dev": "concurrently --names=server,client \"yarn run server\" \"yarn run client\"",
     "dev:client": "react-scripts start",
     "dev:server": "nodemon src/server/index.js",
-    "build": "standard && react-scripts build",
-    "test": "standard && react-scripts test",
     "lint": "./node_modules/.bin/standard",
     "lint:fix": "./node_modules/.bin/standard --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "server": "node src/server/index.js",
+    "test": "standard && react-scripts test"
   },
   "eslintConfig": {
     "extends": [

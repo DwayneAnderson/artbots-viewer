@@ -1,5 +1,5 @@
 const fetchTweets = (listId) =>
-  fetch(`/api/tweets?listId=${listId}`)
+  fetch(`https://elegant-wozniak-2d084d.netlify.app/.netlify/functions/tweets?listId=${listId}`)
     .then(tweets => tweets.json())
 
 export { fetchTweets }
