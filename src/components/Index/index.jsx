@@ -33,7 +33,8 @@ const categories = [
   {
     label: 'Science & Technology',
     items: [
-      { id: '1399765585425170438', label: 'NASA OPUS' }
+      { id: '1399765585425170438', label: 'NASA OPUS' },
+      { id: '1401302645030023168', label: 'Among Stars' }
     ]
   },
   {
@@ -42,7 +43,9 @@ const categories = [
       { id: '1399734600268611585', label: '70s SciFi Art' },
       { id: '1399407403800481792', label: 'xkcd' },
       { id: '1399419658206277633', label: 'Everything is Terrible' },
-      { id: '1399398958137413639', label: 'NEOMECHANICA' }
+      { id: '1399398958137413639', label: 'NEOMECHANICA' },
+      { id: '1401303961370464256', label: 'AutoCharts' },
+      { id: '1401305614760833025', label: 'Old School Hip Hop Flyers' }
     ]
   }
 ]
