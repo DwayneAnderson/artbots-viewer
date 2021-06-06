@@ -19,21 +19,22 @@ const categories = [
     ]
   },
   {
-    label: 'Illustration',
-    items: [
-      { id: '1399398816034398208', label: 'Liana Finck' }
-    ]
-  },
-  {
     label: 'Animation',
     items: [
       { id: '1394666258121957384', label: 'Bees & Bombs' }
     ]
   },
   {
+    label: 'Animals',
+    items: [
+      { id: '1401613832733159424', label: 'Orangutans' },
+      { id: '1401613291655352320', label: 'Capybara Country' }
+    ]
+  },
+  {
     label: 'Science & Technology',
     items: [
-      { id: '1399765585425170438', label: 'NASA OPUS' },
+      { id: '1399765585425170438', label: 'The Ephemerides (NASA OPUS)' },
       { id: '1401302645030023168', label: 'Among Stars' }
     ]
   },
@@ -45,7 +46,13 @@ const categories = [
       { id: '1399419658206277633', label: 'Everything is Terrible' },
       { id: '1399398958137413639', label: 'NEOMECHANICA' },
       { id: '1401303961370464256', label: 'AutoCharts' },
-      { id: '1401305614760833025', label: 'Old School Hip Hop Flyers' }
+      { id: '1401305614760833025', label: 'Old School Hip Hop Flyers' },
+      { id: '1401610106094067713', label: 'SimpsonsScreens 97-98' },
+      { id: '1401610747499532288', label: 'Homestar Runner Screens' },
+      { id: '1401611907325255680', label: 'Atari 800 Screens' },
+      { id: '1399398816034398208', label: 'Liana Finck' },
+      { id: '1401616124484063232', label: 'Glitch 80' },
+      { id: '1401617275623383040', label: 'FlashBak' }
     ]
   }
 ]
