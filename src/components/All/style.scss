@@ -1,0 +1,15 @@
+.All {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  border: 20px solid #000;
+  display: flex;
+  flex-wrap: wrap;
+
+  iframe {
+    border: 0;
+    border: 20px solid #000;
+    min-width: 16.6666666%;
+    min-height: 25%;
+  }
+}

@@ -39,8 +39,8 @@
     .Tweet__Info {
       opacity: 1;
       animation: slideDown;
-      animation-duration: 2s;
-      animation-delay: 10s;
+      animation-duration: 1s;
+      animation-delay: 5s;
       animation-iteration-count: 1;
       animation-timing-function: ease-out;
       animation-fill-mode: forwards;
@@ -90,8 +90,9 @@
       object-position: 50% 50%;
     }
   }
-
 }
+
+
 
 @keyframes slideDown {
   from {bottom: 0;}
