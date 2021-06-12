@@ -17,7 +17,8 @@ const categories = [
       { id: '1401740589868085250', label: 'M.C. Escher Bot' },
       { id: '1401740834832220162', label: 'CMA: Japanese Art' },
       { id: '1401741045168177152', label: 'SLAM: Asian Art' },
-      { id: '1401741880325328896', label: 'Jean-Michel Basquiat Bot' }
+      { id: '1401741880325328896', label: 'Jean-Michel Basquiat Bot' },
+      { id: '1401739479694528512', label: 'MMA: Musical Instruments' }
     ]
   },
   {
@@ -47,6 +48,14 @@ const categories = [
     ]
   },
   {
+    label: 'Television',
+    items: [
+      { id: '1401610106094067713', label: 'SimpsonsScreens 97-98' },
+      { id: '1403360113222508544', label: '80s News Screens' },
+      { id: '1403360573841043460', label: '90s News Screens' }
+    ]
+  },
+  {
     label: 'Miscellaneous',
     items: [
       { id: '1399734600268611585', label: '70s SciFi Art' },
@@ -55,16 +64,13 @@ const categories = [
       { id: '1399398958137413639', label: 'NEOMECHANICA' },
       { id: '1401303961370464256', label: 'AutoCharts' },
       { id: '1401305614760833025', label: 'Old School Hip Hop Flyers' },
-      { id: '1401610106094067713', label: 'SimpsonsScreens 97-98' },
       { id: '1401610747499532288', label: 'Homestar Runner Screens' },
       { id: '1401611907325255680', label: 'Atari 800 Screens' },
       { id: '1399398816034398208', label: 'Liana Finck' },
       { id: '1401616124484063232', label: 'Glitch 80' },
       { id: '1401617275623383040', label: 'FlashBak' },
       { id: '1401731848334495744', label: 'Black Metal Cats' },
-      { id: '1401734536006803456', label: 'American Vintage Ads' },
-      { id: '1401739479694528512', label: 'Musical Instruments (MMA)' }
-
+      { id: '1401734536006803456', label: 'American Vintage Ads' }
     ]
   }
 ]
