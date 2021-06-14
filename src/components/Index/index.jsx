@@ -52,7 +52,7 @@ const categories = [
   {
     label: 'Television',
     items: [
-      { id: '1401610106094067713', label: 'SimpsonsScreens 97-98' },
+      { id: '1401610106094067713', label: 'SimpsonsScreens 87-98' },
       { id: '1403360113222508544', label: '80s News Screens' },
       { id: '1403360573841043460', label: '90s News Screens' }
     ]
