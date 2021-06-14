@@ -72,7 +72,8 @@ const categories = [
       { id: '1401616124484063232', label: 'Glitch 80' },
       { id: '1401617275623383040', label: 'FlashBak' },
       { id: '1401731848334495744', label: 'Black Metal Cats' },
-      { id: '1401734536006803456', label: 'American Vintage Ads' }
+      { id: '1401734536006803456', label: 'American Vintage Ads' },
+      { id: '1404249865819852805', label: 'CompDadJokes' }
     ]
   }
 ]
