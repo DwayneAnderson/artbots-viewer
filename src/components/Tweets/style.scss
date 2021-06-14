@@ -68,8 +68,6 @@
     margin-right: 1.8rem;
   }
 
-  &__Text {}
-
   &__Image,
   &__Video {
     width: 100vw;
@@ -92,9 +90,16 @@
   }
 }
 
-
-
 @keyframes slideDown {
   from {bottom: 0;}
   to {bottom: -20rem;}
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

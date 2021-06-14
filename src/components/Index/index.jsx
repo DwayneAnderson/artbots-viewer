@@ -36,6 +36,7 @@ const categories = [
   {
     label: 'Animals',
     items: [
+      { id: '1403702715117494274', label: 'Animals Being Bros' },
       { id: '1401613832733159424', label: 'Orangutans' },
       { id: '1401613291655352320', label: 'Capybara Country' }
     ]
@@ -44,7 +45,8 @@ const categories = [
     label: 'Science & Technology',
     items: [
       { id: '1399765585425170438', label: 'The Ephemerides (NASA OPUS)' },
-      { id: '1401302645030023168', label: 'Among Stars' }
+      { id: '1401302645030023168', label: 'Among Stars' },
+      { id: '1403699761333506050', label: 'Mechanical Engineering Learn' }
     ]
   },
   {
