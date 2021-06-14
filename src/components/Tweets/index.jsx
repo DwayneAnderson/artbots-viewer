@@ -7,18 +7,11 @@ import TwitterLogo from './../../img/twitter.svg'
 import { fetchTweets } from './http'
 import './style.scss'
 
-const getRandomInt = (min, max) => {
-  min = Math.ceil(min)
-  max = Math.floor(max)
-  return Math.floor(Math.random() * (max - min) + min)
-}
-
 const Tweets = () => {
   const { listId } = useParams()
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [tweets, setTweets] = useState(null)
-  const [isAllMode] = useState(listId === 'all')
   const [tweetIndex, setTweetIndex] = useState(0)
   const [fullscreen, setFullscreen] = useState(null)
 
@@ -36,10 +29,9 @@ const Tweets = () => {
           setError(tweets.error)
         }
         setTweets(tweets)
-        setTweetIndex(isAllMode ? getRandomInt(0, tweets.length) : 0)
         setLoading(false)
       })
-  }, [listId, isAllMode])
+  }, [listId])
   useEffect(loadTweets, [loadTweets, listId])
 
   const reset = useCallback(() => {
@@ -53,17 +45,13 @@ const Tweets = () => {
     if (!tweets) return
     if (tweetIndex === null) return
     if (tweetIndex === tweets.length) return reset()
-    setTimeout(() => setTweetIndex(isAllMode ? getRandomInt(0, tweets.length) : tweetIndex + 1), (isAllMode ? 20 : 60) * 1000)
-  }, [tweetIndex, reset, tweets, isAllMode])
-
-  useEffect(() => {
-    if (isAllMode) {
-      setTweetIndex(getRandomInt(0, 3000))
-    }
-  }, [isAllMode])
+    setTimeout(() => {
+      setTweetIndex(tweetIndex + 1)
+    }, 30 * 1000)
+  }, [tweetIndex, reset, tweets])
 
   return (
-    <div className={`Tweets ${fullscreen ? 'Tweets--fullscreen' : ''} ${isAllMode ? 'Tweets--all' : ''}`}>
+    <div className={`Tweets ${fullscreen ? 'Tweets--fullscreen' : ''}`}>
       {error && <UIError className='Tweets__Error' message={error} />}
       {loading && <UILoading className='Tweets__Loading' />}
       {(!loading && !error) && tweets.slice(tweetIndex, tweetIndex + 4).map(tweet => (
@@ -71,7 +59,6 @@ const Tweets = () => {
           key={tweet.id}
           tweet={tweet}
           current={tweet.id === tweets[tweetIndex].id}
-          // hideInfo={isAllMode}
         />
       ))}
     </div>
@@ -79,7 +66,9 @@ const Tweets = () => {
 }
 
 const Tweet = ({ tweet, i, current, hideInfo = false }) => (
-  <div className={`Tweet ${current ? 'Tweet--current' : ''}`}>
+  <div
+    className={`Tweet ${current ? 'Tweet--current' : ''}`}
+  >
     {!hideInfo && (
       <TweetInfo tweet={tweet} />
     )}
